@@ -29,6 +29,12 @@ const Console: React.FC = () => {
   ];
 
   useEffect(() => {
+    // Reset states when component mounts
+    setText([]);
+    setVisibleText([]);
+    setCurrentLine(0);
+    setIsTyping(true);
+    
     // Add a delay before typing starts
     const startTimeout = setTimeout(() => {
       const timer = setInterval(() => {
@@ -50,6 +56,7 @@ const Console: React.FC = () => {
   // Type animation effect
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
+    
     if (text.length > 0 && isTyping) {
       const lastLine = text[text.length - 1];
       let visibleChars = 0;
@@ -95,7 +102,7 @@ const Console: React.FC = () => {
               <div className="font-mono text-sm p-6 min-h-[350px]" style={{ whiteSpace: 'pre-wrap' }}>
                 {visibleText.map((line, index) => (
                   <div key={index} className="mb-1">
-                    <span className={line && line.startsWith('>') ? 'text-brand-blue' : ''}>
+                    <span className={(line && line.startsWith('>')) ? 'text-brand-blue' : ''}>
                       {line}
                     </span>
                     {index === visibleText.length - 1 && isTyping && (
