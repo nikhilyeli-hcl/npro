@@ -95,7 +95,7 @@ const Console: React.FC = () => {
               <div className="font-mono text-sm p-6 min-h-[350px]" style={{ whiteSpace: 'pre-wrap' }}>
                 {visibleText.map((line, index) => (
                   <div key={index} className="mb-1">
-                    <span className={line.startsWith('>') ? 'text-brand-blue' : ''}>
+                    <span className={line && line.startsWith('>') ? 'text-brand-blue' : ''}>
                       {line}
                     </span>
                     {index === visibleText.length - 1 && isTyping && (
@@ -115,7 +115,7 @@ const Console: React.FC = () => {
               creating efficient, elegant solutions that solve real-world problems.
             </p>
             <p className="text-lg leading-relaxed">
-              Beyond coding, I have a strong interest in UI/UX design, video editing, and photography. 
+              Beyond coding, I have a strong interest in UI/UX design, video editing, photography, and content creation. 
               This combination of technical and creative skills allows me to approach each project with a holistic perspective,
               ensuring the end result is not only functional but also visually compelling and user-friendly.
             </p>
