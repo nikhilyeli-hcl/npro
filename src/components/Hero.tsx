@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
         </div>
         
         <h1 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-          <span className="block">Hi, I'm Nikhil</span>
+          <span className="block">Hi, I'm Nikhil Yeli</span>
           <div className="h-14 md:h-16 lg:h-20 overflow-hidden mt-2">
             {titles.map((title, index) => <div key={title} className="transition-all duration-500 transform" style={{
             opacity: currentTitle === index ? 1 : 0,
