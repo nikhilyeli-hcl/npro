@@ -10,9 +10,9 @@ const Console: React.FC = () => {
 
   // Console content - JSON structure with personal information
   const consoleLines = [
-    '> Nick.getAbout()',
+    '> Nikhil.getAbout()',
     `{`,
-    `  "name": "Nick",`,
+    `  "name": "Nikhil",`,
     `  "title": "Fullstack Software Engineer",`,
     `  "passions": ["Coding", "Design", "Problem Solving"],`,
     `  "background": {`,
@@ -20,11 +20,11 @@ const Console: React.FC = () => {
     `  },`,
     `  "philosophy": "Simple solutions to complex problems."`,
     `}`,
-    '> Nick.contact()',
+    '> Nikhil.contact()',
     `{`,
-    `  "email": "hello@nick.dev",`,
-    `  "github": "github.com/nickdev",`,
-    `  "linkedin": "linkedin.com/in/nickdev"`,
+    `  "email": "hello@nikhil.dev",`,
+    `  "github": "github.com/nikhildev",`,
+    `  "linkedin": "linkedin.com/in/nikhildev"`,
     `}`,
   ];
 
@@ -96,7 +96,7 @@ const Console: React.FC = () => {
                   <div className="w-3 h-3 rounded-full bg-brand-yellow"></div>
                   <div className="w-3 h-3 rounded-full bg-brand-green"></div>
                 </div>
-                <div className="ml-4 text-xs opacity-70">nick@portfolio ~ console</div>
+                <div className="ml-4 text-xs opacity-70">nikhil@portfolio ~ console</div>
               </div>
               
               <div className="font-mono text-sm p-6 min-h-[350px]" style={{ whiteSpace: 'pre-wrap' }}>

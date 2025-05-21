@@ -80,8 +80,8 @@ const Footer: React.FC = () => {
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                <a href="mailto:hello@nick.dev" className="hover:text-foreground transition-colors">
-                  hello@nick.dev
+                <a href="mailto:hello@nikhil.dev" className="hover:text-foreground transition-colors">
+                  hello@nikhil.dev
                 </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} Nick's Portfolio. All Rights Reserved.
+            &copy; {currentYear} Nikhil's Portfolio. All Rights Reserved.
           </p>
           
           <div className="mt-4 sm:mt-0 flex gap-4 text-sm text-muted-foreground">
