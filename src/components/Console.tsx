@@ -11,21 +11,21 @@ const Console: React.FC = () => {
   // Console content - JSON structure with personal information
   const consoleLines = [
     '> Nick.getAbout()',
-    '{',
-    '  "name": "Nick",',
-    '  "title": "Fullstack Software Engineer",',
-    '  "passions": ["Coding", "Design", "Problem Solving"],',
-    '  "background": {',
-    '    "summary": "Experienced software engineer with a passion for creating elegant, efficient, and user-friendly applications."',
-    '  },',
-    '  "philosophy": "Simple solutions to complex problems."',
-    '}',
+    `{`,
+    `  "name": "Nick",`,
+    `  "title": "Fullstack Software Engineer",`,
+    `  "passions": ["Coding", "Design", "Problem Solving"],`,
+    `  "background": {`,
+    `    "summary": "Experienced software engineer with a passion for creating elegant, efficient, and user-friendly applications."`,
+    `  },`,
+    `  "philosophy": "Simple solutions to complex problems."`,
+    `}`,
     '> Nick.contact()',
-    '{',
-    '  "email": "hello@nick.dev",',
-    '  "github": "github.com/nickdev",',
-    '  "linkedin": "linkedin.com/in/nickdev"',
-    '}'
+    `{`,
+    `  "email": "hello@nick.dev",`,
+    `  "github": "github.com/nickdev",`,
+    `  "linkedin": "linkedin.com/in/nickdev"`,
+    `}`,
   ];
 
   useEffect(() => {
@@ -62,7 +62,7 @@ const Console: React.FC = () => {
       let visibleChars = 0;
       
       const typeChar = () => {
-        if (lastLine && visibleChars <= lastLine.length) {
+        if (visibleChars <= lastLine.length) {
           setVisibleText(prev => {
             const newArr = [...prev];
             newArr[text.length - 1] = lastLine.substring(0, visibleChars);
@@ -99,10 +99,10 @@ const Console: React.FC = () => {
                 <div className="ml-4 text-xs opacity-70">nick@portfolio ~ console</div>
               </div>
               
-              <div className="font-mono text-sm p-6 min-h-[350px] bg-black text-green-500" style={{ whiteSpace: 'pre-wrap' }}>
+              <div className="font-mono text-sm p-6 min-h-[350px]" style={{ whiteSpace: 'pre-wrap' }}>
                 {visibleText.map((line, index) => (
                   <div key={index} className="mb-1">
-                    <span className={line && line.startsWith('>') ? 'text-brand-blue' : ''}>
+                    <span className={(line && line.startsWith('>')) ? 'text-brand-blue' : ''}>
                       {line}
                     </span>
                     {index === visibleText.length - 1 && isTyping && (
